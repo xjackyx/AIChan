@@ -9,6 +9,8 @@ public class CameraDirector : MonoBehaviour
     [SerializeField]
     private GameObject thirdPersonCamera;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,19 @@ public class CameraDirector : MonoBehaviour
             firstPersonCamera.SetActive(!firstPersonCamera.activeInHierarchy);
             thirdPersonCamera.SetActive(!thirdPersonCamera.activeInHierarchy);
         }
+
+
+
+        //試しにプレイヤーをOFFにしてカメラ動かしてみるｗ
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            // カメラの移動
+            thirdPersonCamera.transform.Translate(0, 1.1f, 0);
+
+        }
+
+        //transform.Translate(0.1f, 0.1f, 0.1f);
+
+
     }
 }
