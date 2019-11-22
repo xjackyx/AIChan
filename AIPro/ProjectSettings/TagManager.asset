@@ -4,7 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
+  - BO1
+  - BO2
+  - BO3
+  - BO4
+  - BO5
+  - BO6
+  - BO7
+  - BO8
+  - BO9
+  - BO10
+  - BO11
+  - BO12
+  - BO13
   layers:
   - Default
   - TransparentFX
@@ -14,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - player
+  - 
   - 
   - 
   - 
