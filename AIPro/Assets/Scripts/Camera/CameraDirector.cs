@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraDirector : MonoBehaviour
 {
     [SerializeField]
-    private GameObject firstPersonCamera;
+    public GameObject firstPersonCamera;
     [SerializeField]
-    private GameObject thirdPersonCamera;
+    public GameObject thirdPersonCamera;
 
 
 

@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BO1
+  - BO2
+  - BO3
+  - BO4
+  - BO5
+  - BO6
+  - BO7
+  - BO8
+  - BO9
+  - BO10
+  - BO11
+  - BO12
+  - BO13
   layers:
   - Default
   - TransparentFX
