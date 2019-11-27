@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class manager : MonoBehaviour
+public class ResultManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class manager : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             // SampleSceneをロードする
-            SceneManager.LoadScene("Result");
+            GameObject.Find("FadeManager").GetComponent<Fade>().TransitionScene("Title");
         }
     }
 }
