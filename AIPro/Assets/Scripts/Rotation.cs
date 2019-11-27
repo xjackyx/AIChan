@@ -19,22 +19,6 @@ public class Rotation : MonoBehaviour
         RotateLeft();
 
 
-        //if(BO[1] == true)
-        //{
-        //    GetComponent<Rotation>().enabled = true;
-
-
-        //    // Right Rotate
-        //    RotateRight();
-
-        //    // Left Rotate
-        //    RotateLeft();
-        //}
-        //else
-        //{
-        //    GetComponent<Rotation>().enabled = false;
-        //}
-
     }
 
     public void RotateRight()
