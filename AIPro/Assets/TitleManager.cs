@@ -14,7 +14,11 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            // SampleSceneをロードする
+            GameObject.Find("FadeManager").GetComponent<Fade>().TransitionScene("Game");
+        }
     }
 
     // SampleScene(バトル画面)へのシーン遷移を行うメソッド
