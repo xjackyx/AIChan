@@ -21,7 +21,7 @@ public class CameraDirector : MonoBehaviour
     void Update()
     {
         // スペースキーでカメラを切り替える
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             // ↓現在のactive状態から反転 
             firstPersonCamera.SetActive(!firstPersonCamera.activeInHierarchy);
