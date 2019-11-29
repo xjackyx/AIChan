@@ -19,13 +19,9 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         Vector3 playerPos = this.player.transform.position;
         transform.position = new Vector3(playerPos.x, playerPos.y + OFFSET_POS_Y, playerPos.z - 13.0f);
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.position = new Vector3(0, 250, 0);
-            transform.rotation = Quaternion.Euler(90, 0, 0);
-        }
+
     }
 }
