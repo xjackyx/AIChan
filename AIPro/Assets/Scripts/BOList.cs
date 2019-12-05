@@ -100,7 +100,6 @@ public class BOList : MonoBehaviour
                 case 13:
                     BO[count].GetComponent<Rotation>().enabled = true;
                     BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    
                     break;
 
                 default:
@@ -179,25 +178,5 @@ public class BOList : MonoBehaviour
                     break;
             }
         }
-
-
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    count++;
-        //    BO[count].GetComponent<Rotation>().enabled = true;
-        //    if(count>=13)
-        //    {
-        //        count = 0;
-        //    }
-        //}
-        //else
-        //{
-        //    BO[count-1].GetComponent<Rotation>().enabled = false;
-
-        //}
-
-
-
-
     }
 }
