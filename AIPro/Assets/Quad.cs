@@ -10,10 +10,10 @@ public class Quad : MonoBehaviour
     {
         Mesh mesh = new Mesh();
         mesh.vertices = new Vector3[] {
-        new Vector3 (-12f, -12f, 0),
-        new Vector3 (-12f,  12f, 0),
-        new Vector3 (12f , -12f, 0),
-        new Vector3 (12f ,  12f, 0),
+        new Vector3 (-1.2f, -1.2f, 0),
+        new Vector3 (-1.2f,  1.2f, 0),
+        new Vector3 (1.2f , -1.2f, 0),
+        new Vector3 (1.2f ,  1.2f, 0),
     };
 
         mesh.uv = new Vector2[] {
