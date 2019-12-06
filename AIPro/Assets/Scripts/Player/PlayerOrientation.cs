@@ -11,6 +11,9 @@ public class PlayerOrientation : MonoBehaviour
     private float z; //z方向のInputの値
     private Rigidbody rigd;
 
+    float step;
+    public Transform Moveback;
+
 
     void Start()
     {
@@ -24,17 +27,57 @@ public class PlayerOrientation : MonoBehaviour
         x = Input.GetAxis("Horizontal"); //x方向のInputの値を取得
         z = Input.GetAxis("Vertical"); //z方向のInputの値を取得
 
-        rigd.velocity = new Vector3(x * speed * 0.5f, 0, z * speed * 0.5f); //プレイヤーのRigidbodyに対してInputにspeedを掛けた値で更新し移動
+        //Vector3 playerMovement = new Vector3(x, 0, z); //プレイヤーのRigidbodyに対してInputにspeedを掛けた値で更新し移動
+
+        //transform.Translate(playerMovement, Space.Self);
+
+        //rigd.velocity = new Vector3(x * speed * 0.5f, 0, z * speed * 0.5f); //プレイヤーのRigidbodyに対してInputにspeedを掛けた値で更新し移動
 
         Vector3 diff = transform.position - Player_pos; //プレイヤーがどの方向に進んでいるかがわかるように、初期位置と現在地の座標差分を取得
 
-        if (diff.magnitude > 0.01f) //ベクトルの長さが0.01fより大きい場合にプレイヤーの向きを変える処理を入れる(0では入れないので）
-            //if (diff.magnitude > 0.0001f) //ベクトルの長さが0.01fより大きい場合にプレイヤーの向きを変える処理を入れる(0では入れないので）
+        //if (diff.magnitude > 0.01f) //ベクトルの長さが0.01fより大きい場合にプレイヤーの向きを変える処理を入れる(0では入れないので）
+        //                            //if (diff.magnitude > 0.0001f) //ベクトルの長さが0.01fより大きい場合にプレイヤーの向きを変える処理を入れる(0では入れないので）
+        //{
+        //    transform.rotation = Quaternion.LookRotation(diff);  //ベクトルの情報をQuaternion.LookRotationに引き渡し回転量を取得しプレイヤーを回転させる
+        //}
+
+
+        if (Input.GetKey(KeyCode.A))
         {
-                transform.rotation = Quaternion.LookRotation(diff);  //ベクトルの情報をQuaternion.LookRotationに引き渡し回転量を取得しプレイヤーを回転させる
+            //transform.Rotate(new Vector3(0f, x, 0f));
+            transform.eulerAngles += new Vector3(0f, x, 0f);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.eulerAngles += new Vector3(0f, x, 0f);
         }
 
-        Player_pos = transform.position; //プレイヤーの位置を更新
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    transform.Rotate(new Vector3(0f, -x, 0f));
+
+        //}
+
+        // 移動処理
+        rigd.velocity += transform.forward * z;
+
+/*
+        // Quaternion.Slerpと併用して、指定したオブジェクトの方向になめらかに回転する。
+        Vector3 MovebackPosition = Moveback.position;
+        if (transform.position.y != Moveback.position.y)
+        {
+            MovebackPosition = new Vector3(Moveback.position.x, transform.position.y, Moveback.position.z);
+        }
+        Quaternion targetRotation = Quaternion.LookRotation(MovebackPosition - transform.position);
+        transform.rotation = Quaternion.Slerp(Moveback.transform.rotation, Quaternion.Euler(0, 90f, 0), 0.01f);
+
+        //指定した方向にゆっくり回転させる。
+        //step = speed * Time.deltaTime;
+        //    transform.rotation = Quaternion.Slerp(Moveback.transform.rotation, Quaternion.Euler(0, 90f, 0), 0.01f);
+*/
+
+
+        //Player_pos = transform.position; //プレイヤーの位置を更新
     }
 
 
