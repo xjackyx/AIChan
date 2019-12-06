@@ -17,6 +17,7 @@ TagManager:
   - BO11
   - BO12
   - BO13
+  - SelectUI
   layers:
   - Default
   - TransparentFX
