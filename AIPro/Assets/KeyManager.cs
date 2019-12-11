@@ -31,9 +31,9 @@ public class KeyManager : MonoBehaviour
             //シーン内にあるKeyの数が0になった時
             if(count==0)
             {
-                //直接シーンマネージャーで"Result"呼び出し
+                //直接"Result"呼び出し
                 //(Sceneの切り替えはゲームマネージャーのほうがいいかもしれない)
-                SceneManager.LoadScene("Result");
+                GameObject.Find("FadeManager").GetComponent<Fade>().TransitionScene("Result");
             }
         }
         else

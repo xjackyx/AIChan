@@ -11,6 +11,9 @@ public class item : MonoBehaviour
     {
         slider = GameObject.Find("slider").GetComponent<Slider>();
         slider.maxValue = 5;
+
+        //スコアの初期化
+        score = 0;
     }
 
     // Update is called once per frame
