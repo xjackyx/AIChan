@@ -1286,10 +1286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f21720c31684e44b73c5dd448e1bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {fileID: 1469744216}
-  sSpeed: 10
-  dist: {x: 0, y: 0, z: 0}
-  lookTarget: {fileID: 1761651256}
+  target: {fileID: 34582431}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1100111067
 MonoBehaviour:
   m_ObjectHideFlags: 0
