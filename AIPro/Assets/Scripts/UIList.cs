@@ -37,147 +37,151 @@ public class UIList : MonoBehaviour
             UI[0].gameObject.SetActive(false);
         }
 
-        // 次に選択
-        if (Input.GetKeyDown(KeyCode.L))
+        //BOの機能オンの時のみ
+        if (BOList.humanmode == true)
         {
-            count++;
-            if (count >= 13)
+            // 次に選択
+            if (Input.GetKeyDown(KeyCode.L))
             {
-                count = count - 1;
-            }
-            switch (count)
-            {
-                case 0:
-                    UI[count].gameObject.SetActive(false);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 1:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 2:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 3:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 4:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 5:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 6:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 7:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 8:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 9:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 10:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 11:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 12:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                case 13:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count - 1].gameObject.SetActive(false);
-                    break;
-                default:
-                    break;
+                count++;
+                if (count >= 13)
+                {
+                    count = count - 1;
+                }
+                switch (count)
+                {
+                    case 0:
+                        UI[count].gameObject.SetActive(false);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 1:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 2:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 3:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 4:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 5:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 6:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 7:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 8:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 9:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 10:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 11:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 12:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    case 13:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count - 1].gameObject.SetActive(false);
+                        break;
+                    default:
+                        break;
 
+                }
             }
-        }
 
-        //前に選択処理
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            count--;
-            if (count < 0)
+            //前に選択処理
+            if (Input.GetKeyDown(KeyCode.J))
             {
-                count = count + 1;
-            }
-            switch (count)
-            {
-                case 0:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 1:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 2:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 3:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 4:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 5:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 6:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 7:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 8:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 9:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 10:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 11:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 12:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
-                case 13:
-                    UI[count].gameObject.SetActive(true);
-                    UI[count + 1].gameObject.SetActive(false);
-                    break;
+                count--;
+                if (count < 0)
+                {
+                    count = count + 1;
+                }
+                switch (count)
+                {
+                    case 0:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 1:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 2:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 3:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 4:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 5:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 6:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 7:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 8:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 9:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 10:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 11:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 12:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
+                    case 13:
+                        UI[count].gameObject.SetActive(true);
+                        UI[count + 1].gameObject.SetActive(false);
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
         }
     }
