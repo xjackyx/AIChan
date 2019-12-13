@@ -14,10 +14,12 @@ public class Rotation : MonoBehaviour
     void Update()
     {
 
-
-        RotateRight();
-        RotateLeft();
-
+        //BOの機能オンの時のみ
+        if (BOList.humanmode==true)
+        {
+            RotateRight();
+            RotateLeft();
+        }
 
     }
 

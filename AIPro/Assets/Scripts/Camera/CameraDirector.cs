@@ -26,6 +26,18 @@ public class CameraDirector : MonoBehaviour
             // ↓現在のactive状態から反転 
             firstPersonCamera.SetActive(!firstPersonCamera.activeInHierarchy);
             thirdPersonCamera.SetActive(!thirdPersonCamera.activeInHierarchy);
+
+            //BOの機能オンオフ
+            if(BOList.humanmode==true)
+            {
+                //オフ
+                BOList.humanmode = false;
+            }
+            else if(BOList.humanmode==false)
+            {
+                //オン
+                BOList.humanmode = true;
+            }
         }
 
 

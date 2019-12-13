@@ -10,6 +10,7 @@ public class BOList : MonoBehaviour
 {
     public GameObject[] BO;
     public int count = 0;
+    static public bool humanmode = false;
 
     // Update is called once per frame
     void Update()
@@ -34,148 +35,151 @@ public class BOList : MonoBehaviour
         {
             BO[0].GetComponent<Rotation>().enabled = false;
         }
- 
 
-        if (Input.GetKeyDown(KeyCode.L))
+        //BOの機能オンの時のみ
+        if (humanmode==true)
         {
-            count++;
-            if (count >= 13)
+            if (Input.GetKeyDown(KeyCode.L))
             {
-                count = count - 1;
+                count++;
+                if (count >= 13)
+                {
+                    count = count - 1;
+                }
+                switch (count)
+                {
+                    case 0:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 1:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 2:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 3:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 4:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 5:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 6:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 7:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 8:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 9:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 10:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 11:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 12:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 13:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count - 1].GetComponent<Rotation>().enabled = false;
+                        break;
+
+                    default:
+                        break;
+
+                }
             }
-            switch (count)
+
+            if (Input.GetKeyDown(KeyCode.J))
             {
-                case 0:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count-1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 1:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 2:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 3:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 4:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 5:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 6:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 7:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 8:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 9:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 10:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 11:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 12:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 13:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count - 1].GetComponent<Rotation>().enabled = false;
-                    break;
+                count--;
+                if (count < 0)
+                {
+                    count = count + 1;
+                }
+                switch (count)
+                {
+                    case 0:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 1:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 2:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 3:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 4:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 5:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 6:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 7:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 8:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 9:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 10:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 11:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 12:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
+                    case 13:
+                        BO[count].GetComponent<Rotation>().enabled = true;
+                        BO[count + 1].GetComponent<Rotation>().enabled = false;
+                        break;
 
-                default:
-                    break;
-
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            count--;
-            if(count < 0)
-            {
-                count = count + 1;
-            }
-            switch (count)
-            {
-                case 0:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 1:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 2:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 3:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 4:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 5:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 6:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 7:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 8:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 9:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 10:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 11:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 12:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-                case 13:
-                    BO[count].GetComponent<Rotation>().enabled = true;
-                    BO[count + 1].GetComponent<Rotation>().enabled = false;
-                    break;
-
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
         }
     }
