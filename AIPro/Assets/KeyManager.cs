@@ -40,8 +40,6 @@ public class KeyManager : MonoBehaviour
         {
 
         }
-
-        Debug.Log(count);
     }
 
     //Key数変更の通知
