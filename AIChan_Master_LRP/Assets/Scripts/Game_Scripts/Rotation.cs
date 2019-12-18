@@ -14,16 +14,18 @@ public class Rotation : MonoBehaviour
     void Update()
     {
 
-
-        RotateRight();
-        RotateLeft();
-
+        //BOの機能オンの時のみ
+        if (BOList.humanmode == true)
+        {
+            RotateRight();
+            RotateLeft();
+        }
 
     }
 
     public void RotateRight()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("RotateRight"))
         {
             transform.Rotate(Vector3.up, 60);
         }
@@ -31,7 +33,7 @@ public class Rotation : MonoBehaviour
 
     public void RotateLeft()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("RotateLeft"))
         {
             transform.Rotate(Vector3.up, -60);
         }
