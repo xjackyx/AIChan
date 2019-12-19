@@ -25,7 +25,7 @@ public class Rotation : MonoBehaviour
 
     public void RotateRight()
     {
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("RotateRight"))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("RotationRight"))
         {
             transform.Rotate(Vector3.up, 60);
         }
@@ -33,7 +33,7 @@ public class Rotation : MonoBehaviour
 
     public void RotateLeft()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("RotateLeft"))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("RotationLeft"))
         {
             transform.Rotate(Vector3.up, -60);
         }

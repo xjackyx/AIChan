@@ -21,7 +21,7 @@ public class CameraDirector : MonoBehaviour
     void Update()
     {
         // スペースキーでカメラを切り替える
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown("ModeChange"))
         {
             // ↓現在のactive状態から反転 
             TopDownCamera.SetActive(!TopDownCamera.activeInHierarchy);
