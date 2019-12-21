@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
+    public float defaultY;
+    public float Floating;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class item : MonoBehaviour
         //固定用
         float x = this.transform.position.x;
         float z = this.transform.position.z;
-        this.transform.position = new Vector3(x, (sin * 0.5f) + 1.5f, z);
+        this.transform.position = new Vector3(x, (sin * Floating) + defaultY, z);
 
         //-------------------------------------
     }
