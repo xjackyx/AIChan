@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
-    public float defaultY;
     public float Floating;
     // Start is called before the first frame update
     void Start()
@@ -21,10 +20,11 @@ public class item : MonoBehaviour
         transform.Rotate(Vector3.up, 1);
         //上下移動
         float sin = Mathf.Sin(Time.time);
-        //固定用
+        //固定用(省略用)
         float x = this.transform.position.x;
+        float y = this.transform.position.y;
         float z = this.transform.position.z;
-        this.transform.position = new Vector3(x, (sin * Floating) + defaultY, z);
+        this.transform.position = new Vector3(x, (sin * Floating * 0.001f) + y, z);
 
         //-------------------------------------
     }
