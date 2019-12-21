@@ -21,7 +21,7 @@ public class PlayerOrientation : MonoBehaviour
     {
         Player_pos = GetComponent<Transform>().position; //最初の時点でのプレイヤーのポジションを取得
         rigd = GetComponent<Rigidbody>(); //プレイヤーのRigidbodyを取得
-        PlayerOrientarion = 0.7f;
+        PlayerOrientarion = 0.15f;
     }
 
     void Update()
