@@ -4364,7 +4364,12 @@ PrefabInstance:
     - target: {fileID: 1921455993294416840, guid: 38fd2c151a80a574298872b70c0d51b5,
         type: 3}
       propertyPath: moveSpeed
-      value: 0.76
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921455993294416840, guid: 38fd2c151a80a574298872b70c0d51b5,
+        type: 3}
+      propertyPath: PlayerOrientarion
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6904254372336225763, guid: 38fd2c151a80a574298872b70c0d51b5,
         type: 3}
@@ -6162,9 +6167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a882a461e7e0b384dbedbac6d7143f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.76
+  moveSpeed: 0.2
   cameraTarget: {fileID: 1056404938}
-  PlayerOrientarion: 0
+  PlayerOrientarion: 0.2
 --- !u!54 &871015152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7083,6 +7088,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922870182222926213, guid: 3ae063ce498c02d4c96861edf4965d7b,
+        type: 3}
+      propertyPath: sSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 922870182222926215, guid: 3ae063ce498c02d4c96861edf4965d7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7960,7 +7970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 1056404938}
-  sSpeed: 0.1
+  sSpeed: 2
   dist: {x: 0, y: 0, z: 0}
   lookTarget: {fileID: 1790215605}
 --- !u!114 &1113747308
