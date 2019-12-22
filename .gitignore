@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+AIChan_Master_LRP/Assets/Prefab/aiイメージ.prefab.meta
+AIChan_Master_LRP/Assets/Prefab/aiイメージ.prefab
+AIChan_Master_LRP/Assets/Prefab/Main Camera.prefab
+AIChan_Master_LRP/Assets/Prefab/Main Camera.prefab.meta
