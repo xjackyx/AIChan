@@ -33,7 +33,8 @@ public class KeyManager : MonoBehaviour
             {
                 //直接"Result"呼び出し
                 //(Sceneの切り替えはゲームマネージャーのほうがいいかもしれない)
-                GameObject.Find("FadeManager").GetComponent<Fade>().TransitionScene("Result");
+                //GameObject.Find("FadeManager").GetComponent<Fade>().TransitionScene("Result");
+                Descent.DescentStart();
             }
         }
         else
