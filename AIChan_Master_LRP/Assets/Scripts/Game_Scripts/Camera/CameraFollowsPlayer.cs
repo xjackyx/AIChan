@@ -5,6 +5,9 @@ using UnityEngine;
 public class CameraFollowsPlayer : MonoBehaviour
 {
     public Transform cameraTarget;
+    public Transform TopDownCameraTarget;
+    bool bFlag;
+
     public float sSpeed = 0.1f;
     public Vector3 dist;
     public Transform lookTarget;
@@ -22,6 +25,7 @@ Vector3 sPos;
     // Start is called before the first frame update
     void Start()
     {
+        bFlag = false;
         a = 0;
         b = 1;
         //targetObj = GameObject.Find("TargetGameObject");
@@ -36,11 +40,28 @@ Vector3 sPos;
 
     private void FixedUpdate()
     {
-        dPos = cameraTarget.position + dist;
-        sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
-        transform.position = sPos;
+        if(bFlag == false)
+        {
+            dPos = cameraTarget.position + dist;
+            sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
+            transform.position = sPos;
 
-        transform.LookAt(lookTarget.position);
+            transform.LookAt(lookTarget.position);
+        }
+
+
+        // もしもC押されたときはカメラに上にあるカメラを突っ込んでみる。
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            bFlag = !bFlag;
+        }
+        if(bFlag)
+        {
+            dPos = TopDownCameraTarget.position + dist;
+            sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
+            transform.position = sPos;
+            transform.LookAt(lookTarget.position);
+        }
 
         //Vector3 c = lookTarget.transform.position - cameraTarget.transform.position;
 
