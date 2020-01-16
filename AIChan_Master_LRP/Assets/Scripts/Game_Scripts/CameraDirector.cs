@@ -21,10 +21,14 @@ public class CameraDirector : MonoBehaviour
     void Update()
     {
         // スペースキーでカメラを切り替える
-        if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown("ModeChange"))
+        if (Input.GetKeyDown(KeyCode.B) ||
+            Input.GetKeyDown(KeyCode.C) ||
+            Input.GetButtonDown("ModeChange"))
         {
             // ↓現在のactive状態から反転 
-            TopDownCamera.SetActive(!TopDownCamera.activeInHierarchy);
+
+            //TopDownCamera.SetActive(!TopDownCamera.activeInHierarchy);
+
             //thirdPersonCamera.SetActive(!thirdPersonCamera.activeInHierarchy);
 
             //BOの機能オンオフ
