@@ -5,9 +5,15 @@ using UnityEngine;
 public class item : MonoBehaviour
 {
     public float Floating;
+    private GameObject eventsystem;
+    private ItemContoroller script;
+
     // Start is called before the first frame update
     void Start()
     {
+        eventsystem = GameObject.Find("ItemUI");
+
+        script = eventsystem.GetComponent<ItemContoroller>();
     }
 
     // Update is called once per frame
@@ -34,6 +40,8 @@ public class item : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            //アイテム数カウント
+            script.count += 1;
             //Key1個消化
             KeyManager.KeyCountChange();
         }
