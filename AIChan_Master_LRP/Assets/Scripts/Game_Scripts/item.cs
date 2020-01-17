@@ -5,6 +5,9 @@ using UnityEngine;
 public class item : MonoBehaviour
 {
     public float Floating;
+    public bool x;
+    public bool y;
+    public bool z;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +20,20 @@ public class item : MonoBehaviour
         //演出項目----------------------------
 
         //回転
-        transform.Rotate(Vector3.up, 1);
+        if (x == true)
+            transform.Rotate(Vector3.right, 1);
+        if (y == true)
+            transform.Rotate(Vector3.up, 1);
+        if (z == true)
+            transform.Rotate(Vector3.forward, 1);
+
         //上下移動
         float sin = Mathf.Sin(Time.time);
         //固定用(省略用)
-        float x = this.transform.position.x;
-        float y = this.transform.position.y;
-        float z = this.transform.position.z;
-        this.transform.position = new Vector3(x, (sin * Floating * 0.001f) + y, z);
+        float Tx = this.transform.position.x;
+        float Ty = this.transform.position.y;
+        float Tz = this.transform.position.z;
+        this.transform.position = new Vector3(Tx, (sin * Floating * 0.001f) + Ty, Tz);
 
         //-------------------------------------
     }
