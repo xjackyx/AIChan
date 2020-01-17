@@ -11,14 +11,14 @@ public class CameraFollowsPlayer : MonoBehaviour
     public float sSpeed = 0.1f;
     public Vector3 dist;
     public Transform lookTarget;
+    public Transform lookCentralTarget;
 
+    private GameObject ceiling;
 
     int a;
     int b;
     Vector3 dPos;
-Vector3 sPos;
-    //GameObject targetObj;
-    //Vector3 targetPos;
+    Vector3 sPos;
 
 
 
@@ -28,8 +28,7 @@ Vector3 sPos;
         bFlag = false;
         a = 0;
         b = 1;
-        //targetObj = GameObject.Find("TargetGameObject");
-        //targetPos = targetObj.transform.position;
+        ceiling = GameObject.Find("Ceiling");
     }
 
     // Update is called once per frame
@@ -49,26 +48,22 @@ Vector3 sPos;
             transform.LookAt(lookTarget.position);
         }
 
-
-        // もしもC押されたときはカメラに上にあるカメラを突っ込んでみる。
+        
+        // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
         if (Input.GetKeyDown(KeyCode.C))
         {
             bFlag = !bFlag;
+
+            // 天井を消す。天井のスクリプトにアクセスして、消す関数を呼べばいいと思うｗ
+            ceiling.GetComponent<Ceiling>().ChangeActive();
+
         }
-        if(bFlag)
+        if (bFlag)
         {
             dPos = TopDownCameraTarget.position + dist;
             sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
-            transform.LookAt(lookTarget.position);
+            transform.LookAt(lookCentralTarget.position);
         }
-
-        //Vector3 c = lookTarget.transform.position - cameraTarget.transform.position;
-
-        //// AIちゃん向きの取得。
-        //Quaternion rotation = Quaternion.LookRotation(c);
-
-        //// AIちゃん元の向きと変化された向きから補間してクルクル回る。
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.1f);
     }
 }
