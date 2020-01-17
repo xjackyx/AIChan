@@ -54,8 +54,6 @@ public class CameraFollowsPlayer : MonoBehaviour
         {
             bFlag = !bFlag;
 
-            // 天井を消す。天井のスクリプトにアクセスして、消す関数を呼べばいいと思うｗ
-            ceiling.GetComponent<Ceiling>().ChangeActive();
 
         }
         if (bFlag)
