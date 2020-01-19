@@ -28,8 +28,6 @@ public class CameraFollowsPlayer : MonoBehaviour
 
     private GameObject ceiling;
 
-    int a;
-    int b;
     Vector3 dPos;
     Vector3 sPos;
 
@@ -38,32 +36,25 @@ public class CameraFollowsPlayer : MonoBehaviour
     void Start()
     {
         bFlag = false;
-        a = 0;
-        b = 1;
         ceiling = GameObject.Find("Ceiling");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        if(bFlag == false)
+        if (bFlag == false)
         {
             dPos = cameraTarget.position + dist;
-            sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
+            sPos = Vector3.Slerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
             transform.LookAt(lookTarget.position);
         }
 
-        
+
         if (bFlag)
         {
             dPos = TopDownCameraTarget.position + dist;
-            sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
+            sPos = Vector3.Slerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
             transform.LookAt(lookTarget.position);
 
