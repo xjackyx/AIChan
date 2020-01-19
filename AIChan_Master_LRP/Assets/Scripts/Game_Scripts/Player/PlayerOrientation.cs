@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerOrientation : MonoBehaviour
 {
     public float moveSpeed; //プレイヤーの動くスピード
+
+    [SerializeField]
+    private float MAGNITUDE_CONTROL = 0.001f;
+
     float inputHorizontal;
     float inputVertical;
 
@@ -34,10 +38,7 @@ public class PlayerOrientation : MonoBehaviour
     {
             x = Input.GetAxis("Horizontal"); //x方向のInputの値を取得
             z = Input.GetAxis("Vertical"); //z方向のInputの値を取得
-    }
 
-    private void FixedUpdate()
-    {
         // 上から視点フラグOFF時は動けなくする。
         if (CameraFollowsPlayerScr.BFlag == false)
         {
@@ -47,15 +48,17 @@ public class PlayerOrientation : MonoBehaviour
             // 方向キーの入力値とカメラの向きから、移動方向を決定
             Vector3 moveForward = cameraForward * z + Camera.main.transform.right * x;
 
-            // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
-            rigd.velocity = moveForward * moveSpeed + new Vector3(0, rigd.velocity.y, 0);
+            // 移動方向にスピードを掛ける。
+            rigd.velocity = moveForward * moveSpeed;
 
             //プレイヤーがどの方向に進んでいるかがわかるように、初期位置と現在地の座標差分を取得
             Vector3 diff = transform.position - Player_pos;
 
+            Player_pos = transform.position; //プレイヤーの位置を更新
+
             // キャラクターの向きを進行方向に
             //ベクトルの長さが0.01fより大きい場合にプレイヤーの向きを変える処理を入れる(0では入れないので）
-            if (diff.magnitude > 0.001f)
+            if (diff.magnitude > MAGNITUDE_CONTROL)
             {
                 // AIちゃん向きの取得。
                 Quaternion rotation = Quaternion.LookRotation(diff);
@@ -65,7 +68,6 @@ public class PlayerOrientation : MonoBehaviour
 
                 //transform.rotation = Quaternion.LookRotation(moveForward);
             }
-            Player_pos = transform.position; //プレイヤーの位置を更新
         }
     }
 }
