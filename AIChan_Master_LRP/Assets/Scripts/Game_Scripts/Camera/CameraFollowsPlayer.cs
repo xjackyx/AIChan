@@ -6,7 +6,20 @@ public class CameraFollowsPlayer : MonoBehaviour
 {
     public Transform cameraTarget;
     public Transform TopDownCameraTarget;
-    bool bFlag;
+
+    private bool bFlag;
+    public bool BFlag
+    {
+        get
+        {
+            return bFlag;
+        }
+        set
+        {
+            bFlag = value;
+        }
+    }
+
 
     public float sSpeed = 0.1f;
     public Vector3 dist;
@@ -19,7 +32,6 @@ public class CameraFollowsPlayer : MonoBehaviour
     int b;
     Vector3 dPos;
     Vector3 sPos;
-
 
 
     // Start is called before the first frame update
@@ -54,6 +66,9 @@ public class CameraFollowsPlayer : MonoBehaviour
             sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
             transform.LookAt(lookTarget.position);
+
+            // 4つ目のカメラバージョン
+            //transform.LookAt(lookCentralTarget.position);
         }
 
         // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
