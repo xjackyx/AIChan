@@ -44,24 +44,22 @@ public class CameraFollowsPlayer : MonoBehaviour
             dPos = cameraTarget.position + dist;
             sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
-
             transform.LookAt(lookTarget.position);
         }
 
         
-        // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            bFlag = !bFlag;
-
-
-        }
         if (bFlag)
         {
             dPos = TopDownCameraTarget.position + dist;
             sPos = Vector3.Lerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
-            transform.LookAt(lookCentralTarget.position);
+            transform.LookAt(lookTarget.position);
+        }
+
+        // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            bFlag = !bFlag;
         }
     }
 }
