@@ -28,6 +28,8 @@ public class CameraFollowsPlayer : MonoBehaviour
 
     private GameObject ceiling;
 
+    int a;
+    int b;
     Vector3 dPos;
     Vector3 sPos;
 
@@ -36,6 +38,11 @@ public class CameraFollowsPlayer : MonoBehaviour
     void Start()
     {
         bFlag = false;
+<<<<<<< HEAD
+=======
+        a = 0;
+        b = 1;
+>>>>>>> parent of e65004a... あ
         ceiling = GameObject.Find("Ceiling");
     }
 
@@ -50,7 +57,17 @@ public class CameraFollowsPlayer : MonoBehaviour
             transform.LookAt(lookTarget.position);
         }
 
+<<<<<<< HEAD
+=======
+        
+        // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            bFlag = !bFlag;
+>>>>>>> parent of e65004a... あ
 
+
+        }
         if (bFlag)
         {
             dPos = TopDownCameraTarget.position + dist;

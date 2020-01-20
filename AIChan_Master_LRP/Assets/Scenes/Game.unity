@@ -1431,7 +1431,32 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7814633758306871819, guid: a090a7fbfb9269c4fa8f1d29e62de449,
     type: 3}
+<<<<<<< HEAD
   m_PrefabInstance: {fileID: 261218265}
+=======
+  m_PrefabInstance: {fileID: 1400027116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &213053570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213053568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a882a461e7e0b384dbedbac6d7143f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.2
+  cameraTarget: {fileID: 0}
+  PlayerOrientarion: 0.2
+--- !u!54 &213053571
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> parent of e65004a... あ
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &315945917
 GameObject:
