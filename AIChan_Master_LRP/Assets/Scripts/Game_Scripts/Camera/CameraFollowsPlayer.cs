@@ -27,6 +27,9 @@ public class CameraFollowsPlayer : MonoBehaviour
     public Transform lookCentralTarget;
 
     private GameObject ceiling;
+    private PlayerIconController script;
+    private GameObject AIChan;
+    private GameObject ChildAIChan;
 
     Vector3 dPos;
     Vector3 sPos;
@@ -36,7 +39,9 @@ public class CameraFollowsPlayer : MonoBehaviour
     void Start()
     {
         bFlag = false;
-        ceiling = GameObject.Find("Ceiling");
+        AIChan = GameObject.Find("aiイメージ");
+        ChildAIChan = AIChan.transform.Find("PlayerIcon").gameObject;
+        script = ChildAIChan.GetComponent<PlayerIconController>();
     }
 
     // Update is called once per frame
@@ -66,6 +71,7 @@ public class CameraFollowsPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             bFlag = !bFlag;
+            script.ActiveControl(bFlag);
         }
     }
 }
