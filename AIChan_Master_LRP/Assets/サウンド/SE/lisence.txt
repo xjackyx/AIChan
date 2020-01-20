@@ -1,0 +1,45 @@
+
+chenge.wav
+作成者 : 効果音ラボ
+作成者URL : https://soundeffect-lab.info/
+ファイル場所 : https://soundeffect-lab.info/sound/button/
+
+haguruma.wav
+作成者 : On-Jin ～音人～ 
+作成者URL : https://on-jin.com/
+ファイル場所 : https://on-jin.com/sound/meka.php
+
+item_syutoku.wav
+作成者 : 魔王魂
+作成者URL : https://maoudamashii.jokersounds.com/
+ファイル場所 : https://maoudamashii.jokersounds.com/list/se2.html
+
+result_rank_a.wav
+作成者 : G-MIYA
+作成者URL : https://g-miya.net/
+ファイル場所 : https://dova-s.jp/bgm/play4336.html
+
+result_rank_b.wav
+作成者 : G-MIYA
+作成者URL : https://g-miya.net/
+ファイル場所 : https://dova-s.jp/bgm/play4341.html
+
+result_rank_c.wav
+作成者 : とこそい
+作成者URL : https://twitter.com/toko_soy
+ファイル場所 : https://dova-s.jp/bgm/play8001.html
+
+result_rank_s.wav
+作成者 : t.tam
+作成者URL : https://tak-tamura.com/
+ファイル場所 : https://dova-s.jp/bgm/play9364.html
+
+sentaku.wav
+作成者 : 効果音ラボ
+作成者URL : https://soundeffect-lab.info/
+ファイル場所 : https://soundeffect-lab.info/sound/button/
+
+syototu_barricade.wav
+作成者 : 効果音ラボ
+作成者URL : https://soundeffect-lab.info/
+ファイル場所 : https://soundeffect-lab.info/sound/battle/battle2.html
