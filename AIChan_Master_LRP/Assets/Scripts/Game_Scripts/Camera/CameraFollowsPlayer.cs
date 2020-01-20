@@ -56,10 +56,10 @@ public class CameraFollowsPlayer : MonoBehaviour
             dPos = TopDownCameraTarget.position + dist;
             sPos = Vector3.Slerp(transform.position, dPos, sSpeed * Time.deltaTime);
             transform.position = sPos;
-            transform.LookAt(lookTarget.position);
+            //transform.LookAt(lookTarget.position);
 
             // 4つ目のカメラバージョン
-            //transform.LookAt(lookCentralTarget.position);
+            transform.LookAt(lookCentralTarget.position);
         }
 
         // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28085276, g: 0.36602777, b: 0.49832976, a: 1}
+  m_IndirectSpecularColor: {r: 0.28085268, g: 0.3660276, b: 0.49833208, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a882a461e7e0b384dbedbac6d7143f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.2
+  moveSpeed: 0.35
   MAGNITUDE_CONTROL: 0.001
   cameraTarget: {fileID: 0}
   PlayerOrientarion: 0.2
@@ -1351,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236741562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.141, z: -0.187}
+  m_LocalPosition: {x: 0, y: 0.141, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213053569}
@@ -13534,7 +13534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 236741563}
   TopDownCameraTarget: {fileID: 45271679}
-  sSpeed: 1.4
+  sSpeed: 2.5
   dist: {x: 0, y: 0, z: 0}
   lookTarget: {fileID: 31841367}
   lookCentralTarget: {fileID: 1405865063}
@@ -14300,7 +14300,7 @@ PrefabInstance:
     - target: {fileID: 620821911604187929, guid: 1ddda2c23c44ee0418eade73724d6887,
         type: 3}
       propertyPath: sSpeed
-      value: 1.4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 620821911604187928, guid: 1ddda2c23c44ee0418eade73724d6887,
         type: 3}
