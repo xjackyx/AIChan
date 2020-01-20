@@ -38,3 +38,9 @@ AIChan_Master_LRP/Assets/Prefab/aiイメージ.prefab.meta
 AIChan_Master_LRP/Assets/Prefab/aiイメージ.prefab
 AIChan_Master_LRP/Assets/Prefab/Main Camera.prefab
 AIChan_Master_LRP/Assets/Prefab/Main Camera.prefab.meta
+AIChan_Master_LRP/Assets/Prefab/icon.meta
+AIChan_Master_LRP/Assets/Prefab/icon/PlayerIcon.prefab
+AIChan_Master_LRP/Assets/Prefab/icon/PlayerIcon.prefab.meta
+AIChan_Master_LRP/Assets/Scripts/Game_Scripts/icon.meta
+AIChan_Master_LRP/Assets/Scripts/Game_Scripts/icon/PlayerIcon.cs
+AIChan_Master_LRP/Assets/Scripts/Game_Scripts/icon/PlayerIcon.cs.meta
