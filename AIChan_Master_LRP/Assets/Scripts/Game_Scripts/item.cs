@@ -45,6 +45,7 @@ public class item : MonoBehaviour
             Destroy(gameObject);
             //Key1個消化
             KeyManager.KeyCountChange();
+            KeyGage.KeyCountChange();
         }
     }
 
