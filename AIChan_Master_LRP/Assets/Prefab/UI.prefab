@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 8923561762649243148}
   - component: {fileID: 8923561762649243150}
   - component: {fileID: 8923561762649243151}
+  - component: {fileID: 3849495224854218522}
   m_Layer: 5
   m_Name: Gage
   m_TagString: Untagged
@@ -485,3 +486,23 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3849495224854218522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8923561762649243149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e39a9f4e43f1049a8accc5b3519980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI:
+  - {fileID: 3969905516589660116}
+  - {fileID: 8483065863843997821}
+  - {fileID: 5994082785286504528}
+  - {fileID: 691897874329982539}
+  - {fileID: 216521501713301494}
+  oldcount: 5
+  getcount: 0
