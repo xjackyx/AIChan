@@ -569,7 +569,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1525851588319388923}
   - component: {fileID: 1525851588319388804}
-  m_Layer: 0
+  - component: {fileID: 1416082770039494225}
+  m_Layer: 10
   m_Name: PlayerIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525851588319388922}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5788916770680913245}
@@ -638,6 +639,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1416082770039494225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525851588319388922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c189ca05e2104d54388df38a72fb824b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1657334960720350519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e81355dd4dbcfe40a365e7384aae1e3, type: 2}
+  - {fileID: 2100000, guid: 84e50cf378d83914e8551d7b7faacc53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1368,7 +1381,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e81355dd4dbcfe40a365e7384aae1e3, type: 2}
+  - {fileID: 2100000, guid: 84e50cf378d83914e8551d7b7faacc53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1523,7 +1536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e81355dd4dbcfe40a365e7384aae1e3, type: 2}
+  - {fileID: 2100000, guid: 84e50cf378d83914e8551d7b7faacc53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1832,7 +1845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cdc75883b1de7c449ff522c5d786d89, type: 2}
+  - {fileID: 2100000, guid: 84e50cf378d83914e8551d7b7faacc53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1866,7 +1879,7 @@ GameObject:
   - component: {fileID: 8546605435105662342}
   m_Layer: 0
   m_Name: AI_UVfixed_model_v2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1879,7 +1892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7353539234749894478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2424997, y: 0.00032792863, z: 0.74319077}
+  m_LocalPosition: {x: 0, y: 0.005, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 319037622028631021}
@@ -1907,7 +1920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a882a461e7e0b384dbedbac6d7143f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.2
+  moveSpeed: 0.35
   MAGNITUDE_CONTROL: 0.001
   cameraTarget: {fileID: 0}
   PlayerOrientarion: 0.2
@@ -2265,7 +2278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84e50cf378d83914e8551d7b7faacc53, type: 2}
+  - {fileID: 2100000, guid: 7cdc75883b1de7c449ff522c5d786d89, type: 2}
   - {fileID: 2100000, guid: c0073d41ba92cf14790588ff865ec526, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

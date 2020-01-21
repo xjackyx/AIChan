@@ -39,7 +39,7 @@ public class CameraFollowsPlayer : MonoBehaviour
     void Start()
     {
         bFlag = false;
-        AIChan = GameObject.Find("aiイメージ");
+        AIChan = GameObject.Find("AI_UVfixed_model_v2");
         ChildAIChan = AIChan.transform.Find("PlayerIcon").gameObject;
         script = ChildAIChan.GetComponent<PlayerIconController>();
     }
