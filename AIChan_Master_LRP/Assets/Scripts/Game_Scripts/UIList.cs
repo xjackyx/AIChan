@@ -40,7 +40,7 @@ public class UIList : MonoBehaviour
         if (BOList.humanmode == true)
         {
             // 次に選択
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("RightSelect"))
             {
                 count++;
                 if (count >= 13)
@@ -112,7 +112,7 @@ public class UIList : MonoBehaviour
             }
 
             //前に選択処理
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J)|| Input.GetButtonDown("LeftSelect"))
             {
                 count--;
                 if (count < 0)

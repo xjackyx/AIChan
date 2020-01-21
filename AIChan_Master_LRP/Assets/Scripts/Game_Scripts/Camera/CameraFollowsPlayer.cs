@@ -68,7 +68,7 @@ public class CameraFollowsPlayer : MonoBehaviour
         }
 
         // が押されたら上から視点のカメラ2つに切り替わる。そこまで補間。
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)|| Input.GetButtonDown("ModeChange"))
         {
             bFlag = !bFlag;
             script.ActiveControl(bFlag);
